@@ -1,6 +1,6 @@
 .navbar{
     background-color: green;
-    border-bottom: 5px solid rgb(196, 173, 45);
+    border-bottom: 5px solid rgb(215, 190, 47);
 }
 
 #brand{
@@ -9,4 +9,31 @@
 
 #comingsoon{
     color: rgb(196, 173, 45);
+}
+
+.background{
+    background-image: url(https://cdn.wallpapersafari.com/1/43/VRjXCc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    border-bottom: 5px solid rgb(215, 190, 47);
+}
+
+.background2{
+    background-image: url(https://images8.alphacoders.com/880/thumb-1920-880522.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    border-bottom: 5px solid rgb(215, 190, 47);
+}
+
+.margin{
+    margin-right: 235px;
+}
+
+.product{
+    background-color: green;
+    border-bottom: 5px solid rgb(215, 190, 47);
 }
