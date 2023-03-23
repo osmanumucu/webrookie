@@ -1,0 +1,12 @@
+.navbar{
+    background-color: green;
+    border-bottom: 5px solid rgb(196, 173, 45);
+}
+
+#brand{
+    color: rgb(196, 173, 45);
+}
+
+#comingsoon{
+    color: rgb(196, 173, 45);
+}
