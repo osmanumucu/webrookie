@@ -9,12 +9,27 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous" defer></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-          
-    </head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="logo.png">
+    </head>
     <body>
-        <nav class="navbar navbar-expand-lg sticky-top">
+        <aside id="cart-container" class="bg-light position-fixed start-0 top-0 d-flex flex-column align-items-center">
+            <div class="cart-content px-3 py-4 w-100">
+                <h4 class="text-center mb-4"><p>Your Cart</p><i class="bi bi-cart"></i></h4>
+
+                <ul id="cart-items" class="list-unstyled">
+                </ul>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <h5>Total:</h5>
+                    <h5 id="total-price">€0.00</h5>
+                </div>
+                <button class="btn btn-success w-100 mt-4" onclick="checkout()">Checkout</button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <nav class="navbar navbar-expand-lg sticky-top">
                 <div class="container">
-                    <a id="brand" class="navbar-brand fst-italic" href="#"><img style="width: 30px; margin-bottom: 5px;" src="Untitled design-3.png" alt=""><b>talhanks.co</b></a>
+                    <a id="brand" class="navbar-brand fst-italic" href="#"><img style="width: 30px; margin-bottom: 5px;" src="logo.png" alt=""><b>talhanks.co</b></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -30,49 +45,67 @@
                                 <a id="comingsoon" class="nav-link fst-italic fw-bold" href="#">Coming Soon</a>
                             </li>
                         </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item mx-3">
-                                <a class="nav-link text-light" href="#">Profile</a>
-                            </li>
-                            <li class="nav-item mx-3">
-                                <a class="nav-link text-light" href="#">Winkelwagen</a>
-                            </li>
-                        </ul>
+                    </div>
                 </div>
+            </nav>        
+            <section class="background text-center d-flex flex-column justify-content-center text-white">
+                <h1 id="brand" class="fst-italic"><b>talhanks.co</b></h1>
+                <h3 class="fst-italic">We're getting started</h1>
+            </section>
+    
+            <section id="producten" class="product py-3 h-5 container-fluid text-center">
+                <div id="product-row" class="py-5 row justify-content-center gx-5">
+                    <h1 style="color: white;" class="fst-italic"><b>Our Products</b></h1>
                 </div>
-        </nav>
-        <section class="background text-center d-flex flex-column justify-content-center text-white">
-            <h1 id="brand" class="fst-italic"><b>talhanks.co</b></h1>
-            <h3 class="fst-italic">We're getting started</h1>
-        </section>
-
-        <section id="producten" class="product py-3 h-5 container-fluid text-center">
-            <h1 style="color: white;" class="fst-italic"><b>Our Products</b></h1>
-            <div id="row" class="py-5 row justify-content-center">
-            </div>
-        </section>
-        
-        <section id="13:8" class="background2 text-center d-flex flex-column justify-content-center text-white">
-            <h1>13:8</h1>
-            <div class="d-flex flex-column p-5">
-                <div>
-                    <p><b>Introducing “Talhanks”, a clothing brand with the intention of conveying a noble message for the wearer that thrives the ideology of living 4 the others to leave a better world for the future generations.
-                        We offer modern and stylish apparel for men and women. Our brand is focused on providing high-quality clothing that not only looks great but also feels comfortable to wear.                        
-                        Our clothing is made with premium fabrics and attention to detail, ensuring that every piece is durable and built to last. We pride ourselves on our commitment to sustainability, using eco-friendly materials and ethical manufacturing practices.</b></p>
+            </section>
+            
+            <section id="13:8" class="background2 text-center text-white">
+                <div class="d-flex flex-column align-items-center p-5">
+                    <h1>13:8</h1>
+                    <div>
+                        <p class="fst-italic"><b>Introducing “Talhanks”, a clothing brand with the intention of conveying a noble message for the wearer that thrives the ideology of living 4 the others to leave a better world for the future generations.
+                            We offer modern and stylish apparel for men and women. Our brand is focused on providing high-quality clothing that not only looks great but also feels comfortable to wear.                        
+                            Our clothing is made with premium fabrics and attention to detail, ensuring that every piece is durable and built to last. We pride ourselves on our commitment to sustainability, using eco-friendly materials and ethical manufacturing practices.</b></p>
+                    </div>
+                    <div>
+                        <p class="fst-italic"><b>The ostrich, whose head is hidden in the ground, refers to the people who have fallen into a heresy and can not extricate themselves.
+                            How the ostrich seeks to evade the grievous, dark, and unpleasant reality of its negligent existence by believing that covering its head from the hunter would suffice, but leaving its entire body exposed and defenceless for the preys.</b></p>
+                    </div>
+                    <div>
+                        <p class="fst-italic"><b>The ostrich, whose head is hidden in the sand, refers to the people who have fallen into a heresy and can not extricate themselves. It can be found in the book that was written by Said Nursî, called
+                            “The Flashes”, 13th Flash / 8th Indication. It is believed that they told the ostrich, “You have wings, so fly!” But, it folded its wings and declared, “I'm a camel,” and did not fly. Thus it slipped into the hunter's trap and buried its head in the sand to avoid being seen by the hunter. It did, however, leave its huge body exposed as prey for the hunter.
+                            “You claim you're a camel, so you should carry stuff,” they subsequently told it. Then it spread its wings and said, “I'm a bird,” so avoiding being a beast of burden. But, without a defender or sustenance, it was hunted by the hunters.</b></p>
+                    </div>
                 </div>
-                <div>
-                    <p><b>The ostrich, whose head is hidden in the ground, refers to the people who have fallen into a heresy and can not extricate themselves.
-                        How the ostrich seeks to evade the grievous, dark, and unpleasant reality of its negligent existence by believing that covering its head from the hunter would suffice, but leaving its entire body exposed and defenceless for the preys.</b></p>
+            </section>
+            <footer class="text-center bg-dark text-white py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4 class="fst-italic"><b>talhanks.co</b></h4>
+                            <p class="fst-italic">Premium clothing for a better world</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Social Media</h5>
+                            <ul class="list-unstyled d-flex justify-content-center">
+                                <li><a class="text-white me-3" href="https://www.facebook.com/talhanksco" target="_blank"><i class="bi bi-tiktok"></i></a></li>
+                                <li><a class="text-white me-3" href="https://www.twitter.com/talhanksco" target="_blank"><i class="bi bi-twitter"></i></a></li>
+                                <li><a class="text-white me-3" href="https://www.instagram.com/talhanksco" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Contact Us</h5>
+                            <p>Email: talhanksco@gmail.com</p>
+                            <p>Phone: +31 6 45 84 06 88</p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <p class="mb-0">&copy; 2023 talhanks.co. All rights reserved.</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p><b>The ostrich, whose head is hidden in the sand, refers to the people who have fallen into a heresy and can not extricate themselves. It can be found in the book that was written by Said Nursî, called
-                        “The Flashes”, 13th Flash / 8th Indication. It is believed that they told the ostrich, “You have wings, so fly!” But, it folded its wings and declared, “I'm a camel,” and did not fly. Thus it slipped into the hunter's trap and buried its head in the sand to avoid being seen by the hunter. It did, however, leave its huge body exposed as prey for the hunter.
-                        “You claim you're a camel, so you should carry stuff,” they subsequently told it. Then it spread its wings and said, “I'm a bird,” so avoiding being a beast of burden. But, without a defender or sustenance, it was hunted by the hunters.</b></p>
-                </div>
-            </div>
-        </section>
-        <footer>
-
-        </footer>
+            </footer>
+        </main>
     </body>
 </html>
