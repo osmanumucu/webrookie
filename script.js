@@ -10,7 +10,7 @@ fetch('data.json')
         const div = document.createElement('div');
         div.classList.add('col-md-12', 'col-lg-4', 'col-xl-2', 'col-sm-12', 'mb-3', 'd-flex', 'justify-content-center',);
         div.innerHTML = `
-            <div class="card m-2 text-center position-relative" style="width: 18rem;">
+            <div class="card text-center position-relative" style="width: 18rem;">
                 <div class="carousel-item active d-flex flex-column">
                     <div class="image-container d-flex align-items-center" style="height: 200px; overflow: hidden;">
                         <img src="${item.foto}" class="d-block w-100" alt="Image 1" style="object-fit: cover;">

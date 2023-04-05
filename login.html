@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>talhanks.co - log in</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="logo.png">
+        <style>
+            #div{
+                width: 400px;
+            }
+            body{
+                background-image: url(Screenshot\ 2023-03-08\ at\ 02.46.20.png);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            img{
+                width: 300px;
+                height: auto;
+                margin-bottom: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d-flex flex-column align-items-center">
+            <img src="talhankslogo.png" alt="">
+            <div class="login-container">
+                <div id="div" class="login-form text-center border rounded py-2 px-4">
+                    <form class="text-white">
+                        <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
+                        <label for="inputEmail" class="sr-only">Email address or username</label>
+                        <input type="email" id="inputEmail" class="form-control mb-3 mt-1" placeholder="Email address" required autofocus>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control mb-3 mt-1" placeholder="Password" required>
+                        <button class="btn btn-lg btn-warning btn-block" type="submit">Log in</button>
+                    </form>
+                </div>
+            </div>     
+        </div>
+    </body>
+</html>
