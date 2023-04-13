@@ -87,5 +87,43 @@ function resetProductsToOriginal() {
           displayData();
         });
     }
-  }
+}
   
+function displayOrders() {
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    const orderList = document.getElementById('order-list');
+    orderList.innerHTML = '';
+  
+    orders.forEach((order, index) => {
+      const orderDiv = document.createElement('div');
+      orderDiv.classList.add('border', 'p-2', 'rounded', 'my-2');
+      orderDiv.innerHTML = `
+        <h4>Order #${index + 1}</h4>
+        <p>Date: ${new Date(order.date).toLocaleString()}</p>
+      `;
+  
+      const itemList = document.createElement('ul');
+      order.cart.forEach((item) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+          <span>${item.name} (Quantity: ${item.quantity})</span>
+        `;
+        itemList.appendChild(listItem);
+      });
+      orderDiv.appendChild(itemList);
+  
+      orderList.appendChild(orderDiv);
+    });
+}
+  
+displayOrders();
+
+const resetOrdersButton = document.getElementById('reset-orders');
+resetOrdersButton.addEventListener('click', resetOrders);
+
+function resetOrders() {
+    if (confirm('Are you sure you want to reset the orders?')) {
+        localStorage.removeItem('orders');
+        displayOrders();
+    }
+}

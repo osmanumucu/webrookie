@@ -112,11 +112,15 @@ function updateCartDisplay() {
     
     function checkout() {
         if (cart.length === 0) {
-            alert('The cart is empty.');
+          alert('The cart is empty.');
         } else {
-            alert('Thanks for your order!');
-            cart = [];
-            updateCartDisplay();
+          let orders = JSON.parse(localStorage.getItem('orders')) || [];
+          orders.push({ date: new Date(), cart: cart });
+          localStorage.setItem('orders', JSON.stringify(orders));
+      
+          alert('Thanks for your order!');
+          cart = [];
+          updateCartDisplay();
         }
-    }
+      }
     
